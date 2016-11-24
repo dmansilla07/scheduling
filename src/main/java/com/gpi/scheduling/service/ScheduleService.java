@@ -1,12 +1,11 @@
 package com.gpi.scheduling.service;
 
-import com.gpi.scheduling.model.Course;
-import com.gpi.scheduling.model.Option;
-import com.gpi.scheduling.model.Professor;
-import com.gpi.scheduling.model.Student;
+import com.gpi.scheduling.model.*;
+import com.gpi.scheduling.util.Constant;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Vector;
 
 /**
@@ -28,41 +27,86 @@ public class ScheduleService {
         }
     }
 
-    public static void getProfessors(List<Course> courses, List<Professor> professorList) {
-        int n = courses.size();
-
-    }
-
-    public static List<Course> setSemesterCourse(int semester, List<Course> courseList) {
+    //All course List
+    public static List<Course> getSemesterCourse(int semester, List<Course> courseList) {
         List<Course> courses = new ArrayList<Course>();
         for(Course course : courseList) {
-            if (course.getSemester() = semester) {
+            if (course.getSemester() == semester) {
                 courses.add(course);
             }
         }
         return courses;
     }
 
-    public static List<Professor> getProfessorForCourses(List<Course> courseList, List<Professor> professorList) {
-        List<Professor> professors = new ArrayList<Professor>();
+    //Especific Course List, General Professor List
+    public static List<SpecificProfessor> getProfessorForCourses(List<Course> courseList, List<Professor> professorList) {
+        List<SpecificProfessor> professors = new ArrayList<SpecificProfessor>();
         for(Professor professor : professorList) {
             boolean ok = false;
             for(Course course : courseList) {
-                if (ok == true) {
-                    break;
-                }
                 for (Option option : professor.getOptions()) {
                     if (option.getCourse().getId() == course.getId()) {
-                        ok = true;
-                        break;
+                        SpecificProfessor specificProfessor = new SpecificProfessor();
+                        specificProfessor.setId(professor.getId());
+                        specificProfessor.setOption(option);
+                        professors.add(specificProfessor);
                     }
                 }
             }
-            if (ok == true) {
-                professors.add(professor);
-            }
         }
         return professors;
+    }
+
+    //General Course and Professor List
+    //The fucking Genetic algorithm
+    public static List<SpecificProfessor> getProfessorOptionsForSemester(int semester, List<Course> courseList,
+                                                                 List<Professor> professorList) {
+        List<Course> semesterCourses = getSemesterCourse(semester, courseList);
+        List<SpecificProfessor> semesterProfessors = getProfessorForCourses(semesterCourses, professorList);
+
+        List<SpecificProfessor> semesterFinalProfessors = new ArrayList<SpecificProfessor>();
+        double bestFitness = Constant.MAX_FITNESS;
+
+        for(int generation = 1; generation < Constant.MAX_GENERATION; ++generation) {
+            //More or less 7*10, can be omptimized
+            int n = semesterCourses.size();
+            List<SpecificProfessor> nextGenerationProfessors = new ArrayList<SpecificProfessor>();
+            for (Course course : semesterCourses) {
+                List<SpecificProfessor> professorOptionForCourse = new ArrayList<SpecificProfessor>();
+                for (SpecificProfessor professor : semesterProfessors) {
+                    if (professor.getOption().getCourse().getId() == course.getId()) {
+                        professorOptionForCourse.add(professor);
+                    }
+                }
+                int nPr = professorOptionForCourse.size();
+                Random rand = new Random();
+                int x = rand.nextInt(nPr);
+                nextGenerationProfessors.add(professorOptionForCourse.get(x));
+            }
+            if (generation == 1) {
+                bestFitness = GeneticService.getFitness(nextGenerationProfessors);
+                semesterFinalProfessors = nextGenerationProfessors;
+            } else {
+                List<SpecificProfessor> gen1 = new ArrayList<SpecificProfessor>();
+                List<SpecificProfessor> gen2 = new ArrayList<SpecificProfessor>();
+                for(int i=0; i<n; ++i) {
+                    if (i < n/2) {
+                        gen1.add(semesterFinalProfessors.get(i));
+                        gen2.add(nextGenerationProfessors.get(i));
+                    } else {
+                        gen2.add(semesterFinalProfessors.get(i));
+                        gen1.add(nextGenerationProfessors.get(i));
+                    }
+                }
+                if (GeneticService.getFitness(gen1) < bestFitness) {
+                    semesterFinalProfessors = gen1;
+                }
+                if (GeneticService.getFitness(gen2) < bestFitness) {
+                    semesterFinalProfessors = gen2;
+                }
+            }
+        }
+        return semesterFinalProfessors;
     }
 
 }
