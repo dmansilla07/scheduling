@@ -8,4 +8,20 @@ import java.util.List;
 public class Student {
     private String id;
     private List<Course> availableCourses;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public List<Course> getAvailableCourses() {
+        return availableCourses;
+    }
+
+    public void setAvailableCourses(List<Course> availableCourses) {
+        this.availableCourses = availableCourses;
+    }
 }

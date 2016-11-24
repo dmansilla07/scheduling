@@ -10,6 +10,16 @@ public class Course {
     //I2 I1 or both??
     private int type;
 
+    private int numberStudents;
+
+    public int getNumberStudents() {
+        return numberStudents;
+    }
+
+    public void setNumberStudents(int numberStudents) {
+        this.numberStudents = numberStudents;
+    }
+
     public String getId() {
         return id;
     }
