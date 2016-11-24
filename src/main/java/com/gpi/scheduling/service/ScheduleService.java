@@ -3,10 +3,7 @@ package com.gpi.scheduling.service;
 import com.gpi.scheduling.model.*;
 import com.gpi.scheduling.util.Constant;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Vector;
+import java.util.*;
 
 /**
  * @author Diego Mansilla on 11/23/2016.
@@ -78,13 +75,19 @@ public class ScheduleService {
                         professorOptionForCourse.add(professor);
                     }
                 }
+                List<Integer> Idxs = new ArrayList<Integer>();
                 int nPr = professorOptionForCourse.size();
-                Random rand = new Random();
-                int x = rand.nextInt(nPr);
-                nextGenerationProfessors.add(professorOptionForCourse.get(x));
+                long seed = System.nanoTime();
+                for (int i=0; i<nPr; ++i) {
+                    Idxs.add(i);
+                }
+                Collections.shuffle(Idxs, new Random(seed));
+                for(int i=0; i<course.getNumberStudents()/Constant.REGULAR_STUDENTS_PER_CLASS && i < Idxs.size(); ++i) {
+                    nextGenerationProfessors.add(professorOptionForCourse.get(Idxs.get(i)));
+                }
             }
             if (generation == 1) {
-                bestFitness = GeneticService.getFitness(nextGenerationProfessors);
+                bestFitness = GeneticService.getFitness(nextGenerationProfessors, semesterCourses);
                 semesterFinalProfessors = nextGenerationProfessors;
             } else {
                 List<SpecificProfessor> gen1 = new ArrayList<SpecificProfessor>();
@@ -98,10 +101,10 @@ public class ScheduleService {
                         gen1.add(nextGenerationProfessors.get(i));
                     }
                 }
-                if (GeneticService.getFitness(gen1) < bestFitness) {
+                if (GeneticService.getFitness(gen1, semesterCourses) < bestFitness) {
                     semesterFinalProfessors = gen1;
                 }
-                if (GeneticService.getFitness(gen2) < bestFitness) {
+                if (GeneticService.getFitness(gen2, semesterCourses) < bestFitness) {
                     semesterFinalProfessors = gen2;
                 }
             }

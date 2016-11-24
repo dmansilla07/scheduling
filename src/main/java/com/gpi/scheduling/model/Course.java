@@ -10,6 +10,7 @@ public class Course {
     //I2 I1 or both??
     private int type;
 
+    //This is not going to be read...
     private int numberStudents;
 
     public int getNumberStudents() {
