@@ -57,7 +57,8 @@ public class ScheduleService {
     //General Course and Professor List
     //The fucking Genetic algorithm
     public static List<SpecificProfessor> getProfessorOptionsForSemester(int semester, List<Course> courseList,
-                                                                 List<Professor> professorList) {
+                                                                 List<Professor> professorList, List<Student> studentList) {
+        fillCourses(courseList, studentList);
         List<Course> semesterCourses = getSemesterCourse(semester, courseList);
         List<SpecificProfessor> semesterProfessors = getProfessorForCourses(semesterCourses, professorList);
 
