@@ -5,12 +5,15 @@ import com.gpi.scheduling.model.Option;
 import com.gpi.scheduling.model.Period;
 import com.gpi.scheduling.model.SpecificProfessor;
 import com.gpi.scheduling.util.Constant;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
  * @author Diego Mansilla on 11/24/2016.
  */
+
+@Service
 public class GeneticService {
 
     public static int getOverlapFromPeriods(Period period1, Period period2) {

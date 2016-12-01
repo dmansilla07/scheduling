@@ -2,12 +2,15 @@ package com.gpi.scheduling.service;
 
 import com.gpi.scheduling.model.*;
 import com.gpi.scheduling.util.Constant;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 /**
  * @author Diego Mansilla on 11/23/2016.
  */
+
+@Service
 public class ScheduleService {
 
     public static void fillCourses(List<Course> courses, List<Student> studentList) {
@@ -56,7 +59,7 @@ public class ScheduleService {
 
     //General Course and Professor List
     //The fucking Genetic algorithm
-    public static List<SpecificProfessor> getProfessorOptionsForSemester(int semester, List<Course> courseList,
+    public List<SpecificProfessor> getProfessorOptionsForSemester(int semester, List<Course> courseList,
                                                                  List<Professor> professorList, List<Student> studentList) {
         fillCourses(courseList, studentList);
         List<Course> semesterCourses = getSemesterCourse(semester, courseList);

@@ -3,12 +3,36 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
-sourceCompatibility = 1.5
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile "org.springframework:spring-web"
+    compile "postgresql:postgresql:9.1-901-1.jdbc4"
+    compile "org.springframework.boot:spring-boot-starter-actuator"
+    compile "org.springframework.boot:spring-boot-devtools"
+    compile "org.springframework.boot:spring-boot-starter-data-jpa"
+    compile "org.apache.commons:commons-lang3:3.4"
+    compile "org.apache.httpcomponents:httpclient:4.3.6"
+    compile "net.sf.json-lib:json-lib:2.4:jdk15"
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
