@@ -13,6 +13,14 @@ public class Course {
     //This is not going to be read...
     private int numberStudents;
 
+    public Course(String id, int credits, int semester, int type, int numberStudents) {
+        this.id = id;
+        this.credits = credits;
+        this.semester = semester;
+        this.type = type;
+        this.numberStudents = numberStudents;
+    }
+
     public int getNumberStudents() {
         return numberStudents;
     }

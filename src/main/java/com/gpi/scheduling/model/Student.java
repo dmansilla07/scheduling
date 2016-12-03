@@ -9,6 +9,11 @@ public class Student {
     private String id;
     private List<Course> availableCourses;
 
+    public Student(String id, List<Course> availableCourses) {
+        this.id = id;
+        this.availableCourses = availableCourses;
+    }
+
     public String getId() {
         return id;
     }

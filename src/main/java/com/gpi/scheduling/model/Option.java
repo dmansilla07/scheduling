@@ -9,6 +9,11 @@ public class Option {
     Course course;
     List<Period> periodsTime;
 
+    public Option(Course course, List<Period> periodsTime) {
+        this.course = course;
+        this.periodsTime = periodsTime;
+    }
+
     public Course getCourse() {
         return course;
     }

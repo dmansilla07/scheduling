@@ -8,6 +8,11 @@ public class SpecificProfessor {
     private String id;
     private Option option;
 
+    public SpecificProfessor(String id, Option option) {
+        this.id = id;
+        this.option = option;
+    }
+
     public String getId() {
         return id;
     }

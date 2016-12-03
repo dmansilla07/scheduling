@@ -9,6 +9,11 @@ public class Professor {
     private String id;
     private List<Option> options;
 
+    public Professor(String id, List<Option> options) {
+        this.id = id;
+        this.options = options;
+    }
+
     public String getId() {
         return id;
     }

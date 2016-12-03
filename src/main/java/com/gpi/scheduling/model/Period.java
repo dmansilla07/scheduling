@@ -7,6 +7,11 @@ public class Period {
     private int startHour;
     private int endHour;
 
+    public Period(int startHour, int endHour) {
+        this.startHour = startHour;
+        this.endHour = endHour;
+    }
+
     public int getStartHour() {
         return startHour;
     }
