@@ -68,27 +68,8 @@ public class Test {
         List<Student> studentList = new ArrayList<>();
         List<Professor> professorList = getProfessors(new File("C:\\Users\\dmans\\Desktop\\ProyectoGPI\\Professor.txt"));
 
-        List<Period> periodList1 = new ArrayList<>();
-        List<Period> periodList2 = new ArrayList<>();
-
-        List<Option> optionList = new ArrayList<>();
-
-        Course course1 = new Course("1", 5, 1, 1, 40);
-
-        periodList1.add(new Period(0, 2));
-        periodList2.add(new Period(1, 3));
-
-        optionList.add(new Option(course1, periodList1));
-        optionList.add(new Option(course1, periodList2));
-
-        professorList.add(new Professor("1", optionList));
-
-        courseList.add(new Course("1", 5, 1, 1, 40));
-        courseList.add(new Course("2", 5, 1, 1, 40));
-        courseList.add(new Course("3", 5, 1, 1, 40));
-
         List<SpecificProfessor> specificProfessorList = new ArrayList<>();
-        specificProfessorList = scheduleService.getProfessorOptionsForSemester(1, courseList, professorList, studentList);
+        specificProfessorList = scheduleService.getProfessorOptionsForSemester(5, courseList, professorList, studentList);
         for (SpecificProfessor specificProfessor : specificProfessorList) {
             System.out.println(specificProfessor.getId());
         }

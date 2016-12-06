@@ -18,7 +18,7 @@ public class ScheduleService {
         for(Student student : studentList) {
             for (Course studentCourse : student.getAvailableCourses()) {
                 for (Course course : courses) {
-                    if (studentCourse.getId() == course.getId()) {
+                    if (studentCourse.getId().equals(course.getId())) {
                         course.setNumberStudents(course.getNumberStudents() + 1);
                         break;
                     }
@@ -45,7 +45,9 @@ public class ScheduleService {
             boolean ok = false;
             for(Course course : courseList) {
                 for (Option option : professor.getOptions()) {
-                    if (option.getCourseId() == course.getId()) {
+
+                    System.out.println(option.getCourseId() + " " + course.getId());
+                    if (option.getCourseId().equals(course.getId())) {
                         SpecificProfessor specificProfessor = new SpecificProfessor(professor.getId(), option);
                         specificProfessor.setId(professor.getId());
                         specificProfessor.setOption(option);
@@ -75,7 +77,7 @@ public class ScheduleService {
             for (Course course : semesterCourses) {
                 List<SpecificProfessor> professorOptionForCourse = new ArrayList<SpecificProfessor>();
                 for (SpecificProfessor professor : semesterProfessors) {
-                    if (professor.getOption().getCourseId() == course.getId()) {
+                    if (professor.getOption().getCourseId().equals(course.getId())) {
                         professorOptionForCourse.add(professor);
                     }
                 }

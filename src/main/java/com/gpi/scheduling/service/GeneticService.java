@@ -42,11 +42,11 @@ public class GeneticService {
         double fitness = 0.0;
         for (SpecificProfessor professor : professorList) {
             for (Course course : courseList) {
-                if (course.getId() != professor.getOption().getCourse().getId()) {
+                if (course.getId() != professor.getOption().getCourseId()) {
                     int minOverlapping = Constant.MAX_HOURS;
                     for (SpecificProfessor professor2 : professorList) {
-                        if (professor2.getOption().getCourse().getId() == course.getId()) {
-                            if (professor2.getId() == professor.getId()) {
+                        if (professor2.getOption().getCourseId().equals(course.getId())) {
+                            if (professor2.getId().equals(professor.getId())) {
                                 if (getOverlapping(professor.getOption(), professor2.getOption()) > 0) {
                                     return Constant.MAX_FITNESS;
                                 }

@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1d2df68-09cf-44fe-a6a0-bd3e44c4207e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/Courses.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/gpi/scheduling/Test.class" afterPath="$PROJECT_DIR$/build/classes/main/com/gpi/scheduling/Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/gpi/scheduling/model/Option.class" afterPath="$PROJECT_DIR$/build/classes/main/com/gpi/scheduling/model/Option.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/gpi/scheduling/service/GeneticService.class" afterPath="$PROJECT_DIR$/build/classes/main/com/gpi/scheduling/service/GeneticService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/gpi/scheduling/service/ScheduleService.class" afterPath="$PROJECT_DIR$/build/classes/main/com/gpi/scheduling/service/ScheduleService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Option.java" afterPath="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Option.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/GeneticService.java" afterPath="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/GeneticService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/ScheduleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/ScheduleService.java" />
     </list>
     <ignored path="scheduling2.iws" />
@@ -56,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="68" column="117" selection-start-line="68" selection-start-column="117" selection-end-line="68" selection-end-column="117" />
+            <state relative-caret-position="172">
+              <caret line="71" column="80" selection-start-line="71" selection-start-column="80" selection-end-line="71" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,15 +74,17 @@
       <file leaf-file-name="ScheduleService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/ScheduleService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+            <state relative-caret-position="138">
+              <caret line="94" column="29" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3052#3071#0" expanded="true" />
-                <element signature="e#3207#3226#0" expanded="true" />
-                <element signature="e#3539#3548#0" expanded="true" />
-                <element signature="e#4344#4363#0" expanded="true" />
-                <element signature="e#4427#4446#0" expanded="true" />
+                <element signature="e#1433#1452#0" expanded="true" />
+                <element signature="e#2816#2835#0" expanded="true" />
+                <element signature="e#3148#3167#0" expanded="true" />
+                <element signature="e#3303#3322#0" expanded="true" />
+                <element signature="e#3640#3649#0" expanded="true" />
+                <element signature="e#4445#4464#0" expanded="true" />
+                <element signature="e#4528#4547#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,10 +100,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="GeneticService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/GeneticService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="53" column="48" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Course.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Course.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="306">
               <caret line="18" column="5" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="5" />
               <folding />
             </state>
@@ -118,8 +133,8 @@
       <file leaf-file-name="Option.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Option.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+            <state relative-caret-position="87">
+              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="4" />
               <folding>
                 <element signature="e#358#359#0" expanded="true" />
                 <element signature="e#389#390#0" expanded="true" />
@@ -554,7 +569,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Class.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/application/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/GeneticService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/controller/ScheduleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/util/Constant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Course.java" />
@@ -563,8 +577,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/SpecificProfessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Professor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Option.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/ScheduleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/ScheduleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/GeneticService.java" />
       </list>
     </option>
   </component>
@@ -1095,7 +1110,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1105,7 +1120,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18494272" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43535188" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1128,9 +1143,22 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/ScheduleService.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="12" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="professorList.get(10).options" />
+        <watch expression="professorList.get(2).options.get(0)" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1158,11 +1186,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3052#3071#0" expanded="true" />
-            <element signature="e#3207#3226#0" expanded="true" />
-            <element signature="e#3539#3548#0" expanded="true" />
-            <element signature="e#4344#4363#0" expanded="true" />
-            <element signature="e#4427#4446#0" expanded="true" />
+            <element signature="e#1433#1452#0" expanded="true" />
+            <element signature="e#2816#2835#0" expanded="true" />
+            <element signature="e#3148#3167#0" expanded="true" />
+            <element signature="e#3303#3322#0" expanded="true" />
+            <element signature="e#3640#3649#0" expanded="true" />
+            <element signature="e#4445#4464#0" expanded="true" />
+            <element signature="e#4528#4547#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1269,11 +1299,13 @@
           <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3052#3071#0" expanded="true" />
-            <element signature="e#3207#3226#0" expanded="true" />
-            <element signature="e#3539#3548#0" expanded="true" />
-            <element signature="e#4344#4363#0" expanded="true" />
-            <element signature="e#4427#4446#0" expanded="true" />
+            <element signature="e#1433#1452#0" expanded="true" />
+            <element signature="e#2816#2835#0" expanded="true" />
+            <element signature="e#3148#3167#0" expanded="true" />
+            <element signature="e#3303#3322#0" expanded="true" />
+            <element signature="e#3640#3649#0" expanded="true" />
+            <element signature="e#4445#4464#0" expanded="true" />
+            <element signature="e#4528#4547#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1378,11 +1410,13 @@
           <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3052#3071#0" expanded="true" />
-            <element signature="e#3207#3226#0" expanded="true" />
-            <element signature="e#3539#3548#0" expanded="true" />
-            <element signature="e#4344#4363#0" expanded="true" />
-            <element signature="e#4427#4446#0" expanded="true" />
+            <element signature="e#1433#1452#0" expanded="true" />
+            <element signature="e#2816#2835#0" expanded="true" />
+            <element signature="e#3148#3167#0" expanded="true" />
+            <element signature="e#3303#3322#0" expanded="true" />
+            <element signature="e#3640#3649#0" expanded="true" />
+            <element signature="e#4445#4464#0" expanded="true" />
+            <element signature="e#4528#4547#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1487,11 +1521,13 @@
           <caret line="106" column="67" selection-start-line="106" selection-start-column="67" selection-end-line="106" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3052#3071#0" expanded="true" />
-            <element signature="e#3207#3226#0" expanded="true" />
-            <element signature="e#3539#3548#0" expanded="true" />
-            <element signature="e#4344#4363#0" expanded="true" />
-            <element signature="e#4427#4446#0" expanded="true" />
+            <element signature="e#1433#1452#0" expanded="true" />
+            <element signature="e#2816#2835#0" expanded="true" />
+            <element signature="e#3148#3167#0" expanded="true" />
+            <element signature="e#3303#3322#0" expanded="true" />
+            <element signature="e#3640#3649#0" expanded="true" />
+            <element signature="e#4445#4464#0" expanded="true" />
+            <element signature="e#4528#4547#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1636,30 +1672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/GeneticService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/SpecificProfessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1693,9 +1705,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Course.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/SpecificProfessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="5" />
           <folding />
         </state>
@@ -1703,8 +1731,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/model/Option.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        <state relative-caret-position="87">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="4" />
           <folding>
             <element signature="e#358#359#0" expanded="true" />
             <element signature="e#389#390#0" expanded="true" />
@@ -1718,28 +1746,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/ScheduleService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+        <state relative-caret-position="172">
+          <caret line="71" column="80" selection-start-line="71" selection-start-column="80" selection-end-line="71" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3052#3071#0" expanded="true" />
-            <element signature="e#3207#3226#0" expanded="true" />
-            <element signature="e#3539#3548#0" expanded="true" />
-            <element signature="e#4344#4363#0" expanded="true" />
-            <element signature="e#4427#4446#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/ScheduleService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="68" column="117" selection-start-line="68" selection-start-column="117" selection-end-line="68" selection-end-column="117" />
+        <state relative-caret-position="138">
+          <caret line="94" column="29" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1433#1452#0" expanded="true" />
+            <element signature="e#2816#2835#0" expanded="true" />
+            <element signature="e#3148#3167#0" expanded="true" />
+            <element signature="e#3303#3322#0" expanded="true" />
+            <element signature="e#3640#3649#0" expanded="true" />
+            <element signature="e#4445#4464#0" expanded="true" />
+            <element signature="e#4528#4547#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gpi/scheduling/service/GeneticService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="53" column="48" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
