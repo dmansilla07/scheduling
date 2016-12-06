@@ -46,7 +46,7 @@ public class ScheduleService {
             for(Course course : courseList) {
                 for (Option option : professor.getOptions()) {
 
-                    System.out.println(option.getCourseId() + " " + course.getId());
+                    //System.out.println(option.getCourseId() + " " + course.getId());
                     if (option.getCourseId().equals(course.getId())) {
                         SpecificProfessor specificProfessor = new SpecificProfessor(professor.getId(), option);
                         specificProfessor.setId(professor.getId());

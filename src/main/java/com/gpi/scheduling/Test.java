@@ -71,7 +71,13 @@ public class Test {
         List<SpecificProfessor> specificProfessorList = new ArrayList<>();
         specificProfessorList = scheduleService.getProfessorOptionsForSemester(5, courseList, professorList, studentList);
         for (SpecificProfessor specificProfessor : specificProfessorList) {
-            System.out.println(specificProfessor.getId());
+            System.out.println("Professor :" +specificProfessor.getId());
+                Option option = specificProfessor.getOption();
+                System.out.println("Curso: " + option.getCourseId());
+                for(Period period : option.getPeriodsTime()) {
+                    System.out.println(period.getStartHour() + " " + period.getEndHour());
+                }
+
         }
 
     }
