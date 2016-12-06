@@ -6,20 +6,20 @@ import java.util.List;
  * @author Diego Mansilla on 11/23/2016.
  */
 public class Option {
-    Course course;
+    String courseId;
     List<Period> periodsTime;
 
-    public Option(Course course, List<Period> periodsTime) {
-        this.course = course;
+    public Option(String courseId, List<Period> periodsTime) {
+        this.courseId = courseId;
         this.periodsTime = periodsTime;
     }
 
-    public Course getCourse() {
-        return course;
+    public String getCourseId() {
+        return courseId;
     }
 
-    public void setCourse(Course course) {
-        this.course = course;
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
     }
 
     public List<Period> getPeriodsTime() {
