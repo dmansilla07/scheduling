@@ -1,6 +1,7 @@
 package com.gpi.scheduling;
 
 import com.gpi.scheduling.model.*;
+import com.gpi.scheduling.service.GeneticService;
 import com.gpi.scheduling.service.ScheduleService;
 
 import java.io.BufferedReader;
@@ -24,7 +25,7 @@ public class Test {
                 int cred = scanner.nextInt();
                 int semester = scanner.nextInt();
                 int type = scanner.nextInt();
-                courseList.add(new Course(id, cred, semester, type, 20));
+                courseList.add(new Course(id, cred, semester, type, 40));
             }
             return courseList;
         } catch(Exception ex) {
@@ -69,9 +70,15 @@ public class Test {
         List<Professor> professorList = getProfessors(new File("C:\\Users\\dmans\\Desktop\\ProyectoGPI\\Professor.txt"));
 
         List<SpecificProfessor> specificProfessorList = new ArrayList<>();
-        specificProfessorList = scheduleService.getProfessorOptionsForSemester(5, courseList, professorList, studentList);
+        specificProfessorList = scheduleService.getProfessorOptionsForSemester(1, courseList, professorList, studentList);
+
+        List<Course> semesterCourses = ScheduleService.getSemesterCourse(1, courseList);
+
+        GeneticService geneticService = new GeneticService();
+
+        System.out.println("Fitness: " + GeneticService.getFitness(specificProfessorList, semesterCourses));
         for (SpecificProfessor specificProfessor : specificProfessorList) {
-            System.out.println("Professor :" +specificProfessor.getId());
+            System.out.println("Professor : " +specificProfessor.getId());
                 Option option = specificProfessor.getOption();
                 System.out.println("Curso: " + option.getCourseId());
                 for(Period period : option.getPeriodsTime()) {

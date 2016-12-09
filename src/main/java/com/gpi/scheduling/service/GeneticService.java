@@ -17,13 +17,15 @@ import java.util.List;
 public class GeneticService {
 
     public static int getOverlapFromPeriods(Period period1, Period period2) {
-        if (period1.getEndHour() > period2.getStartHour() && period2.getEndHour() > period1.getEndHour()) {
-            if (period1.getStartHour() >= period2.getStartHour()) {
-                return period1.getEndHour() - period1.getStartHour();
+
+        if (period2.getEndHour() >= period1.getStartHour()) {
+            if (period1.getEndHour() >= period2.getEndHour()) {
+                return period2.getEndHour() - period1.getStartHour();
             } else {
-                return period1.getEndHour() - period2.getStartHour();
+                return period1.getEndHour() - period1.getStartHour();
             }
         }
+
         return 0;
     }
 
@@ -31,8 +33,21 @@ public class GeneticService {
         int totalOverlapping = 0;
         for(Period period1 : option1.getPeriodsTime()) {
             for (Period period2 : option2.getPeriodsTime()) {
-                totalOverlapping += getOverlapFromPeriods(period1, period2);
-                totalOverlapping += getOverlapFromPeriods(period2, period1);
+                if (period1.getStartHour() >= period2.getStartHour()) {
+                    totalOverlapping += getOverlapFromPeriods(period1, period2);
+                } else {
+                    totalOverlapping += getOverlapFromPeriods(period2, period1);
+                }
+
+                /*if(option1.getCourseId().equals("1") && option2.getCourseId().equals("5") && totalOverlapping > 0 ) {
+                    if (period1.getStartHour() >= period2.getStartHour()) {
+                        System.out.println(getOverlapFromPeriods(period1, period2));
+                    } else {
+                        System.out.println(getOverlapFromPeriods(period2, period1));
+                    }
+                    System.out.println(period1.getStartHour() + " " + period1.getEndHour());
+                    System.out.println(period2.getStartHour() + " " + period2.getEndHour());
+                }*/
             }
         }
         return totalOverlapping;
@@ -40,11 +55,13 @@ public class GeneticService {
 
     public static double getFitness(List<SpecificProfessor> professorList, List<Course> courseList) {
         double fitness = 0.0;
-        for (SpecificProfessor professor : professorList) {
+        for (int i = 0; i < professorList.size(); ++i) {
+            SpecificProfessor professor = professorList.get(i);
             for (Course course : courseList) {
-                if (course.getId() != professor.getOption().getCourseId()) {
-                    int minOverlapping = Constant.MAX_HOURS;
-                    for (SpecificProfessor professor2 : professorList) {
+                if (!course.getId().equals(professor.getOption().getCourseId())) {
+                    int minOverlapping = 1000000;
+                    for (int j = 0; j < professorList.size(); ++j) {
+                        SpecificProfessor professor2 = professorList.get(j);
                         if (professor2.getOption().getCourseId().equals(course.getId())) {
                             if (professor2.getId().equals(professor.getId())) {
                                 if (getOverlapping(professor.getOption(), professor2.getOption()) > 0) {

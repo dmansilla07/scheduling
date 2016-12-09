@@ -60,7 +60,6 @@ public class ScheduleService {
     }
 
     //General Course and Professor List
-    //The fucking Genetic algorithm
     public List<SpecificProfessor> getProfessorOptionsForSemester(int semester, List<Course> courseList,
                                                                  List<Professor> professorList, List<Student> studentList) {
         fillCourses(courseList, studentList);
@@ -107,12 +106,22 @@ public class ScheduleService {
                         gen1.add(nextGenerationProfessors.get(i));
                     }
                 }
-                if (GeneticService.getFitness(gen1, semesterCourses) < bestFitness) {
+                if (generation % 10000 == 0) {
+                    System.out.println("Generation " + generation + " Fitness : " + bestFitness);
+                }
+                double ChildFitness1 = GeneticService.getFitness(gen1, semesterCourses);
+                double ChildFitness2 = GeneticService.getFitness(gen2, semesterCourses);
+                if (ChildFitness1 < bestFitness) {
                     semesterFinalProfessors = gen1;
+                    bestFitness = ChildFitness1;
                 }
-                if (GeneticService.getFitness(gen2, semesterCourses) < bestFitness) {
+                if (ChildFitness2 < bestFitness) {
                     semesterFinalProfessors = gen2;
+                    bestFitness = ChildFitness2;
                 }
+            }
+            if (generation <= 10 || generation % 10000 == 0) {
+                System.out.println("Generation " + generation + " Fitness : " + bestFitness);
             }
         }
         return semesterFinalProfessors;
